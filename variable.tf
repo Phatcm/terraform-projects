@@ -55,3 +55,53 @@ variable "ssh_location" {
   description   = "the ip address that can access into the ec2 instances"
   type          = string
 }
+
+#RDS variables
+
+variable "database_instance_engine" {
+  default       = "mysql"
+  description   = "the database engine identifier"
+  type          = string
+}
+
+variable "database_instance_engine_version" {
+  default       = "8.0.31"
+  description   = "the database engine version identifier"
+  type          = string
+}
+
+variable "multi_az_deployment" {
+  default       = "false"
+  description   = "create a stand by instances"
+  type          = bool
+}
+
+variable "database_instance_identifier" {
+  default       = "dev-rds-instances"
+  description   = "the database instance identifier"
+  type          = string
+}
+
+variable "database_instance_class_identifier" {
+  default       = "db.t2.micro"
+  description   = "the type instance class identifier"
+  type          = string
+}
+
+variable "database_login_username" {
+  default       = "admin"
+  description   = "the database username identifier"
+  type          = string
+}
+
+variable "database_login_password" {
+  default       = "admin243278"
+  description   = "the database password identifier"
+  type          = string
+}
+
+variable "database_name" {
+  default       = "applicationdb"
+  description   = "the database name identifier"
+  type          = string
+}
