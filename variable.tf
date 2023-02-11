@@ -105,3 +105,11 @@ variable "database_name" {
   description   = "the database name identifier"
   type          = string
 }
+
+# ALB variables
+
+variable "ssl_certificate_arn" {
+  default       = ""
+  description   = "the database name identifier"
+  type          = string
+}
