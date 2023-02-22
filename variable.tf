@@ -109,7 +109,7 @@ variable "database_name" {
 # ALB variables
 
 variable "ssl_certificate_arn" {
-  default       = ""
-  description   = "the database name identifier"
+  default       = "arn:aws:acm:ap-northeast-1:642702811292:certificate/335488dc-4339-430f-b4d8-e08d9a489fc4"
+  description   = "sll certificate arn"
   type          = string
 }

@@ -61,7 +61,7 @@ resource "aws_lb_listener" "alb_http_listener" {
     }
   }
 }
-/*
+
 # create a listener on port 443 with forward action
 # terraform aws create listener
 resource "aws_lb_listener" "alb_https_listener" {
@@ -69,11 +69,10 @@ resource "aws_lb_listener" "alb_https_listener" {
   port               = 443
   protocol           = "HTTPS"
   ssl_policy         = "ELBSecurityPolicy-2016-08"
-  certificate_arn    = 
+  certificate_arn    = var.ssl_certificate_arn
 
   default_action {
-    type             = 
-    target_group_arn = 
+    type             = "forward"
+    target_group_arn = aws_lb_target_group.alb_target_group.arn
   }
 }
-*/
