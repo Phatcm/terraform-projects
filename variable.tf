@@ -109,7 +109,28 @@ variable "database_name" {
 # ALB variables
 
 variable "ssl_certificate_arn" {
-  default       = "arn:aws:acm:ap-northeast-1:642702811292:certificate/335488dc-4339-430f-b4d8-e08d9a489fc4"
+  default       = "arn:aws:acm:ap-northeast-1:642702811292:certificate/74809a92-ae52-4f4d-bd19-3d19da2b30ca"
   description   = "sll certificate arn"
+  type          = string
+}
+
+#SNS topic variables
+variable "operator_email" {
+  default       = "phat.caominh.dev@gmail.com"
+  description   = "my email"
+  type          = string
+}
+
+
+#Auto Scaling Group variables
+variable "launch_template_name" {
+  default       = "dev-launch-template"
+  description   = "name of the launche template"
+  type          = string
+}
+
+variable "ec2_image_id" {
+  default       = "dev-launch-template"
+  description   = "name of the launche template"
   type          = string
 }
